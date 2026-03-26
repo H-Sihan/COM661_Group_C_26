@@ -1,0 +1,25 @@
+<h1>businesses works!</h1>
+
+<h2>There are {{businesses_list.length}} businesses in the directory</h2>
+
+<h2 class="a">The 1st business is {{businesses_list[0].name}}</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            @for (business of businesses_list; track business.name){
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">
+                        {{business.name}}
+                    </div>
+                    <div class="card-body">
+                        {{business.town}}
+                    </div>
+                    <div class="card-footer">
+                        Rating: {{business.rating}}
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
